@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "baseUrl": ".",
+    "paths": {
+      "_observables": ["./observables"],
+      "_reducers": ["./redux/reducers"],
+      "_actions": ["./redux/actions"],
+      "_components": ["./components"],
+      "_providers": ["./providers"],
+      "_utils": ["./utils"]
+    }
+  }
+}
