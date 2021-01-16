@@ -28,5 +28,5 @@ export const GetTwilioToken = (req: Request, res: Response) => {
 
   const jwt = token.toJwt();
 
-  res.status(201).json({ token });
+  res.status(201).json(token);
 }
