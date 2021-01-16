@@ -1,7 +1,7 @@
 require('dotenv').config()
 import express, { Request, Response } from "express";
 import next from "next";
-
+import routes from "./routes";
 
 const dev = process.env.NODE_ENV !== "production";
 const app = next({ dev });
@@ -15,6 +15,8 @@ const port = process.env.PORT || 3000;
 
     server.use(express.json());
     server.use(express.urlencoded({ extended: true }));
+
+    server.use("/api", routes);
 
     server.all("*", (req: Request, res: Response) => {
       return handle(req, res);
